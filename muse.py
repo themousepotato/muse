@@ -11,15 +11,16 @@ def main():
     quote, author = ast.literal_eval(data[random.randint(0,len(data))])
 
     Notify.init("muse")
-    notification = Notify.Notification.new(quote, author)
+    ntn = Notify.Notification.new(quote, author)
 
-    image = GdkPixbuf.Pixbuf.new_from_file("/usr/share/muse/img/%s.png" % random.randint(1, 6))
+    img = GdkPixbuf.Pixbuf.new_from_file("/usr/share/muse/img/%s.png" % random.randint(1, 6))
 
-    notification.set_icon_from_pixbuf(image)
-    notification.set_image_from_pixbuf(image)
+    ntn.set_icon_from_pixbuf(img)
+    ntn.set_image_from_pixbuf(img)
 
-    time.sleep(3)
-    notification.show()
+    time.sleep(2)
+
+    ntn.show()
 
 if __name__ == '__main__':
     main()
