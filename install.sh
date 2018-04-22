@@ -1,9 +1,8 @@
 #!/bin/bash
 
-sudo mkdir /usr/share/muse
+sudo mkdir {/usr/share/muse,/usr/share/muse/img}
 sudo cp {muse.py,quotes.txt,LICENSE,README.md} /usr/share/muse
-sed '$ i\/etc/init.d/muse.sh || exit 1' /etc/rc.local > /tmp/muse-rc.local
-sudo mv /tmp/muse-rc.local /etc/rc.local
-sudo cp muse.sh /etc/init.d
-sudo chmod +x /etc/init.d/muse.sh
-sudo update-rc.d muse.sh defaults
+cp muse.desktop ~/.config/autostart
+cd img
+sudo cp {1.png,2.png,3.png,4.png,5.png,6.png} /usr/share/muse/img
+sudo chmod +x /usr/share/muse/muse.py

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/share/muse/muse.py
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=muse.desktop
+Name=Muse
+Comment[en_US]=Start your day with a quote
+Comment=Start your day with a quote
+
