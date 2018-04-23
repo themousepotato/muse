@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo apt install fortune-mod
 sudo mkdir /usr/share/muse
 sudo cp -R * /usr/share/muse
 mkdir {~/.config,~/.config/autostart}
